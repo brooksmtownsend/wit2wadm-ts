@@ -1,0 +1,3 @@
+[submodule "wit2wadm"]
+	path = wit2wadm
+	url = https://github.com/brooksmtownsend/wit2wadm

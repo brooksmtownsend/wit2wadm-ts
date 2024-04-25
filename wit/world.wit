@@ -1,0 +1,7 @@
+package example:convert;
+
+world convert {
+  import wasmcloud:tools/convert;
+
+  export wasmcloud:tools/convert;
+}

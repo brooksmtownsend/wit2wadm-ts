@@ -1,0 +1,25 @@
+{
+  "name": "wit2wadm-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wit2wadm.js",
+  "scripts": {
+    "build:tsc": "tsc",
+    "build:component": "jco componentize -w wit -o dist/wit2wadm.wasm dist/http-hello-world.js",
+    "build:actor": "wash build --sign-only --config-path wasmcloud.toml",
+    "build": "npm run build:tsc && npm run build:component && npm run build:actor",
+    "start": "npm run build && npm run wadm:start",
+    "reload": "npm run build && npm run wadm:stop && npm run wadm:start",
+    "stop": "npm run wadm:stop",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@bytecodealliance/componentize-js": "^0.7.0",
+    "@bytecodealliance/jco": "^1.0",
+    "@types/node": "^20.10.8",
+    "typescript": "^5.3.3"
+  }
+}
