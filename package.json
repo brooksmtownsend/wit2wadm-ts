@@ -5,7 +5,7 @@
   "main": "wit2wadm.js",
   "scripts": {
     "build:tsc": "tsc",
-    "build:component": "jco componentize -w wit -o dist/wit2wadm.wasm dist/http-hello-world.js",
+    "build:component": "jco componentize -w wit -o dist/wit2wadm.wasm dist/wit2wadm.js",
     "build:actor": "wash build --sign-only --config-path wasmcloud.toml",
     "build": "npm run build:tsc && npm run build:component && npm run build:actor",
     "start": "npm run build && npm run wadm:start",
